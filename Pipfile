@@ -1,0 +1,41 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flit = "<4"
+loguru = "*"
+
+[dev-packages]
+add-trailing-comma = "*"
+black = "==21.5b1"
+commitizen = "*"
+flake8 = "*"
+flake8-bandit = "*"
+flake8-black = "*"
+flake8-bugbear = "*"
+flake8-builtins = "*"
+flake8-commas = "*"
+flake8-comprehensions = "*"
+flake8-docstrings = "*"
+flake8-fixme = "*"
+flake8-multiline-containers = "*"
+flake8-simplify = "*"
+isort = "*"
+mkdocs = "*"
+mypy = "*"
+pep8-naming = "*"
+pre-commit = "*"
+pydoc-markdown = "<4.0.0,>=3.0.0"
+pyinstaller = "*"
+pyinstaller-versionfile = "*"
+pytest = "*"
+pytest-cov = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+lint = "python -m scripts.lint"
+test = "python -m pytest"

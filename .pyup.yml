@@ -1,0 +1,9 @@
+update: all
+branch: main
+schedule: "every week on monday"
+assignees:
+  - kthy
+pr_prefix: pyup
+requirements:
+  - Pipfile
+  - Pipfile.lock

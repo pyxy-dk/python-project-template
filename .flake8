@@ -1,0 +1,20 @@
+[flake8]
+max-line-length = 99
+
+filename =
+  *.py,
+  *.cgi
+
+# A few mods here to silence conflicts with black
+extend-ignore =
+    C814, # only relevant for Python 2
+    E203, # whitespace before ',' cf. <https://github.com/PyCQA/pycodestyle/issues/373>
+    S322, # only relevant for Python 2
+    W503  # break before a binary operator is PEP 8 compliant
+
+per-file-ignores =
+    tests/test_canary.py:W291
+
+exclude =
+    .ipynb_checkpoints
+    .env

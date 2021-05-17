@@ -1,0 +1,46 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+
+    runs-on: windows-2019
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: Install pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Install dependencies
+        run: |
+          pipenv sync --dev
+      - name: Parse version number from tag
+        id: semver
+        run: |
+          $semver="${{ github.ref }}".Substring(11)
+          echo "::set-output name=semver::$semver"
+      - name: Create FFI file
+        run: |
+          pipenv run create-version-file version.yml --outfile fixedfileinfo.txt --version ${{ steps.semver.outputs.semver }}.${{ github.run_number }}
+      - name: Build executable
+        run: |
+          pipenv run python -OO -m PyInstaller --noconfirm --onefile --name python-project-template --icon ./img/python-project-template.ico --version-file fixedfileinfo.txt ./src/python_project_template/__main__.py
+      - name: Create zip archive for release
+        run: |
+          cd dist
+          7z a -tzip -bd python-project-template-${{ steps.semver.outputs.semver }}.zip python_project_template.cfg python-project-template.exe README.txt
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body_path: release-notes/v${{ steps.semver.outputs.semver }}.md
+          files: dist/python-project-template-${{ steps.semver.outputs.semver }}.zip
+          prerelease: false
