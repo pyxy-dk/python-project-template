@@ -1,15 +1,11 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
-
-[packages]
-flit = "<4"
-loguru = "*"
 
 [dev-packages]
 add-trailing-comma = "*"
-black = "==21.10b0"
+black = "==22.1.0"
 commitizen = "*"
 flake8 = "*"
 flake8-bandit = "*"
@@ -32,6 +28,10 @@ pyinstaller = "*"
 pyinstaller-versionfile = "*"
 pytest = "*"
 pytest-cov = "*"
+
+[packages]
+flit = "<4"
+loguru = "*"
 
 [requires]
 python_version = "3.7"
