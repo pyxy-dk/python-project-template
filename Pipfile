@@ -5,7 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 add-trailing-comma = "*"
-black = "==22.1.0"
+black = "==22.3.0"
 commitizen = "*"
 flake8 = "*"
 flake8-bandit = "*"
