@@ -126,8 +126,6 @@ Note that `Pipfile.lock` is not included but should be committed once generated.
   `Kristian Thy`\
   `PyXY`\
   `pyxy.dk`
-* Check that the [black][black-badge-href] version in the `Pipfile` is
-  the latest release. (It's the only pinned dependency.)
 * Initialize a virtualenv and install dependencies:\
   `$ pipenv update --dev`
 * If you want to publish to [PyPi] at some point, remember to fill in

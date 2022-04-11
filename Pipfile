@@ -4,8 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-add-trailing-comma = "*"
-black = "==22.3.0"
+black = "*"
 commitizen = "*"
 flake8 = "*"
 flake8-bandit = "*"
@@ -24,7 +23,7 @@ pep8-naming = "*"
 pre-commit = "*"
 pyinstaller = "*"
 pyinstaller-versionfile = "*"
-pytest = "*"
+pytest = ">=7.0"
 pytest-cov = "*"
 
 [packages]
