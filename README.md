@@ -39,7 +39,6 @@ modify the copyright blurb in the source files.
 * Speaking of git, there's a comprehensive `.gitignore` file.
 * Easy logging with [loguru].
 * Integration with [pre-commit.ci][pre-commit-ci] for auto-fixing pull requests.
-* Integration with [pyup.io](https://pyup.io) for automated dependency updates.
 * Pytest setup with [codecov.io](https://codecov.io) integration.
 
 ## 👷 2: TODO
@@ -97,7 +96,6 @@ python-project-template
 ├── .gitignore                      ← List of ignored files
 ├── .markdownlint.json              ← Markdown lint settings
 ├── .pre-commit-config.yaml         ← Git pre-commit hooks
-├── .pyup.yml                       ← PyUp.io settings
 ├── CHANGELOG.md                    ← Changelog
 ├── LICENSE                         ← Actual license for this repo
 ├── LICENSE.AGPLv3.md               ← AGPLv3 license template
@@ -115,9 +113,6 @@ Note that `Pipfile.lock` is not included but should be committed once generated.
 * Create a new repo on GitHub using this repo as a template. ([HOWTO])
 * Make sure to turn off git `autocrlf`:\
   `git config core.autocrlf false`
-* To make the various integrations work you need to sign up with the
-  different services (pyup.io, readthedocs, pre-commit.ci etc.) of
-  course. Most of these have a free tier for open source projects.
 * Make it your own project. Search and replace the following strings
   with your project/repo/real name as applicable:\
   `python-project-template`\
@@ -167,7 +162,7 @@ as inspiration for which scout marks you want to display for your own project.
 [![Code style: black][black-badge-img]][black-badge-href]
 [![Conventional commits][conventional-commits-badge-img]][conventional-commits-badge-href]
 [![pre-commit][pre-commit-badge-img]][pre-commit-badge-href]
-[![Updates][pyup-badge-img]][pyup-badge-href]
+![License][license-badge-img]
 
 ![Build status][github-actions-build-badge-img]
 ![Release status][github-actions-release-badge-img]
@@ -180,7 +175,6 @@ as inspiration for which scout marks you want to display for your own project.
 [![PyPI - Wheel][pypi-badge-img-whl]][pypi-badge-href]
 
 [![Latest GitHub release][release-badge-img]][release-badge-href]
-![License][license-badge-img]
 
 ---
 
@@ -212,8 +206,6 @@ as inspiration for which scout marks you want to display for your own project.
 [pypi-badge-img-impl]: https://img.shields.io/pypi/implementation/python-project-template
 [pypi-badge-img-pyv]: https://img.shields.io/pypi/pyversions/python-project-template
 [pypi-badge-img-whl]: https://img.shields.io/pypi/wheel/python-project-template
-[pyup-badge-href]: https://pyup.io/repos/github/pyxy-dk/python-project-template/
-[pyup-badge-img]: https://pyup.io/repos/github/pyxy-dk/python-project-template/shield.svg
 [release-badge-img]: https://img.shields.io/github/v/release/pyxy-dk/python-project-template?sort=semver
 [release-badge-href]: https://github.com/pyxy-dk/python-project-template/releases
 [sonarcloud-badge-href]: https://sonarcloud.io/dashboard?id=kthy_python-project-template
