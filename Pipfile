@@ -30,9 +30,6 @@ pytest-cov = "*"
 flit = "<4"
 loguru = "*"
 
-[requires]
-python_version = "3.7"
-
 [scripts]
 lint = "python -m scripts.lint"
 test = "python -m pytest"
