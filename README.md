@@ -43,9 +43,6 @@ modify the copyright blurb in the source files.
 
 ## 👷 2: TODO
 
-* [[#1](https://github.com/pyxy-dk/python-project-template/issues/1)]
-  Move [mypy] configuration into `pyproject.toml`
-  [once the functionality has stabilised](https://github.com/python/mypy/issues/5205#issuecomment-832779057).
 * [[#2](https://github.com/pyxy-dk/python-project-template/issues/2)] Ensure
   [pipx](https://pipxproject.github.io/pipx/) compatibility by setting up
   [flit entrypoints](https://flit.readthedocs.io/en/latest/pyproject_toml.html#scripts-section).

@@ -67,6 +67,21 @@ use_parentheses = true
 line_length = 99
 py_version = 37
 
+[tool.mypy]
+plugins = [
+  "numpy.typing.mypy_plugin",
+]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = [
+  "pandapower.*",
+  "psycopg2",
+]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 minversion = "7.0"
 filterwarnings = "error::UserWarning"
