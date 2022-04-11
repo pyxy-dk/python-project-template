@@ -41,7 +41,6 @@ modify the copyright blurb in the source files.
 * Integration with [pre-commit.ci][pre-commit-ci] for auto-fixing pull requests.
 * Integration with [pyup.io](https://pyup.io) for automated dependency updates.
 * Pytest setup with [codecov.io](https://codecov.io) integration.
-* Documentation auto-generated from docstrings and published to [readthedocs.org][rtd].
 
 ## 👷 2: TODO
 
@@ -99,15 +98,11 @@ python-project-template
 ├── .markdownlint.json              ← Markdown lint settings
 ├── .pre-commit-config.yaml         ← Git pre-commit hooks
 ├── .pyup.yml                       ← PyUp.io settings
-├── .readthedocs-custom-steps.yml   ← ReadTheDocs.org meets Pydoc-Markdown
-├── .readthedocs-requirements.txt   ← ReadTheDocs.org requirements shim
-├── .readthedocs.yml                ← ReadTheDocs.org settings
 ├── CHANGELOG.md                    ← Changelog
 ├── LICENSE                         ← Actual license for this repo
 ├── LICENSE.AGPLv3.md               ← AGPLv3 license template
 ├── LICENSE.MIT.md                  ← MIT license template
 ├── Pipfile                         ← Dependencies and scripts
-├── pydoc-markdown.yml              ← Pydoc-Markdown settings
 ├── pyproject.toml                  ← Project metadata and settings
 ├── README.md                       ← This file
 └── version.yml                     ← File info for Windows .exe
@@ -162,7 +157,6 @@ release workflow.
 
 ## 📜 6: Handy Developer References
 
-* [Pydoc-Markdown](https://pypi.org/project/pydoc-markdown/)
 * [pytest - good integration practices](https://docs.pytest.org/en/6.2.x/goodpractices.html)
 * [Python packaging pitfalls](https://blog.ionelmc.ro/2014/06/25/python-packaging-pitfalls/)
 * [Python 3 Type Hints Cheat Sheet](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
@@ -224,7 +218,6 @@ as inspiration for which scout marks you want to display for your own project.
 [pyup-badge-img]: https://pyup.io/repos/github/pyxy-dk/python-project-template/shield.svg
 [release-badge-img]: https://img.shields.io/github/v/release/pyxy-dk/python-project-template?sort=semver
 [release-badge-href]: https://github.com/pyxy-dk/python-project-template/releases
-[rtd]: https://readthedocs.org
 [sonarcloud-badge-href]: https://sonarcloud.io/dashboard?id=kthy_python-project-template
 [sonarcloud-badge-img]: https://sonarcloud.io/api/project_badges/measure?project=kthy_python-project-template&metric=sqale_rating
 [tox]: https://tox.readthedocs.io/en/latest/

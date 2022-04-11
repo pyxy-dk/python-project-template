@@ -51,17 +51,10 @@ requires-python = ">=3.7"
 keywords = "github,template,repository"
 
 [tool.flit.metadata.requires-extra]
-doc = [
-  "mkdocs",
-  "pydoc-markdown <4.0.0,>=3.0.0",
-]
 test = [
   "pytest",
   "pytest-cov",
 ]
-
-[tool.flit.metadata.urls]
-Documentation = "https://python-project-template.readthedocs.io/en/latest/"
 
 [tool.isort]
 combine_as_imports = true
